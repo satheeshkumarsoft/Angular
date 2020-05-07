@@ -1,0 +1,73 @@
+<p>register works!</p>
+<html>
+    <head>
+
+    </head>
+    <body>
+<table>
+    Name<input type="text" [(ngModel)]="name"><br><br>
+    {{name}}<br><br><br>
+
+    <input type="text"[value]="onename">
+
+    
+    {{onename}}<br><br><br>
+    <p [innerText]="num"></p>
+
+{{num}}    LastName<input type="text"[(ngModel)]="lastname"><br><br>
+    <input type="radio" id="male" name="gender" value="male" [(ngModel)]="gender">
+    <label for="male">Male</label><br>
+    <input type="radio" id="female" name="gender" value="female" [(ngModel)]="gender">
+    <label for="female">Female</label><br>
+    <input type="radio" id="other" name="gender" value="other" [(ngModel)]="gender">
+    <label for="other">Other</label><br>
+    <br>
+    <label for="city">City:</label>
+    
+    <select [(ngModel)]="city">
+      <option value="erode" >erode</option>
+      <option value="Chennai">Chennai</option>
+      <option value="Palani">Palani</option>
+      <option value="Arachalur">Arachalur</option>
+    </select>
+    <br><br>
+    <input type="checkbox" [(ngModel)]="agree">I Agree
+    
+    <br><br>
+
+    <div *ngIf="agree">
+<p>wdjnwkjdnwkdjnwdqqwd</p>
+
+    </div>
+    <input type="button" value="Register" (click)="myfunction()" />
+
+
+    <table>
+        <thead>
+            <th>Name</th>
+            <th>LastName</th>
+            <th>gender</th>
+            <th>City</th>
+            <th>agree</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let hero of list">
+        
+        
+                <td>{{hero[0].register_fname}}</td>
+                <td>{{ hero[0].register_lname}}</td>
+                <td>{{hero[0].register_gender}}</td>
+                <td>{{hero[0].register_city}}</td>
+                <td>{{hero[0].register_agree}}</td>
+            </tr>
+        </tbody>
+    </table>
+`
+
+</table>
+    </body>
+</html>
+
+
+
+<router-outlet></router-outlet>
