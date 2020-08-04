@@ -24,7 +24,9 @@ export class AppComponent {
     console.log("sucess function");
     
   } 
+  
   myClickFunction() { 
+    
     //just added console.log which will display the event details in browser on click of the button.
     alert("Button is clicked");
     console.log(event);
